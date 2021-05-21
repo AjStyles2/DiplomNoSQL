@@ -7,7 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="77,129,0,0" TextWrapping="Wrap" Text="GET" VerticalAlignment="Top" Width="120"/>
+
+
+        <Grid Name="GridResult" Background="White" Margin="0,88,0,103" MouseUp="MouseClickGrid_HOOK">
+            <TextBox    Name="AnsBox" MaxLength="10" HorizontalAlignment="Left" Height="23" Margin="77,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label      Name="DescriptionLbl" Content="Вставьте пропущенное слово в колонку" HorizontalAlignment="Left" Margin="70,62,0,0" VerticalAlignment="Top"/>
+            <Button     Name ="AnsBtn" Content="Проверить" HorizontalAlignment="Left" Margin="77,186,0,0" VerticalAlignment="Top" Width="75" Click="CheckAnswer_BTN"/>
+            <Label      Name="ResultLbl" Visibility="Hidden" Content="РЕЗУЛЬТАТ" HorizontalAlignment="Left" Margin="70,81,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" FontWeight="Bold" FontSize="24" Foreground="#FFFF5A5A"/>
+        </Grid>
 
     </Grid>
 </UserControl>

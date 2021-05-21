@@ -71,5 +71,15 @@ namespace Diplom
                 StackPanelMain.Children.Add(screen);
             }
         }
+
+        private void AddNewTest_BTN(object sender, RoutedEventArgs e)
+        {
+            var menuFinancial = new List<SubItem>();
+            menuFinancial.Add(new SubItem("XLENO"));
+            var item1 = new ItemMenu("StreamsO", menuFinancial);
+
+            Menu.Children.Add(new UserControlMenuItem(item1, this));
+
+        }
     }
 }
