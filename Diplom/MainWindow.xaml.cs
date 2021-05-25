@@ -1,4 +1,5 @@
 ﻿using Diplom.Droppers;
+using Diplom.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,11 +27,11 @@ namespace Diplom
             InitializeComponent();
 
             var menuRegister = new List<SubItem>();
-            menuRegister.Add(new SubItem("SET", new UserControlSet()));
+            menuRegister.Add(new SubItem("Request SET", new UserControlSet()));
             menuRegister.Add(new SubItem("GET", new UserControlGet()));
             menuRegister.Add(new SubItem("INCR"));
             menuRegister.Add(new SubItem("DECR"));
-            var item1 = new ItemMenu("Strings", menuRegister); 
+            var item1 = new ItemMenu("REDIS Strings", menuRegister); 
 
             var menuSchedule = new List<SubItem>();
             menuSchedule.Add(new SubItem("RPUSH"));
@@ -59,6 +60,8 @@ namespace Diplom
             Menu.Children.Add(new UserControlMenuItem(item3, this));
             Menu.Children.Add(new UserControlMenuItem(item4, this));
             Menu.Children.Add(new UserControlMenuItem(item5, this));
+
+            DataContext = new MainViewModel();
         }
 
         internal void SwitchScreen(object sender) // метод для смены отображающейся страницы
