@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +21,20 @@ namespace Diplom
     /// </summary>
     public partial class UserControlSet : UserControl
     {
+
+        public static ObservableCollection<TextBox> TextBoxList = new ObservableCollection<TextBox>();
+
         public UserControlSet()
         {
             InitializeComponent();
+            TextBoxList.Add(AnsBox1);
+            TextBoxList.Add(AnsBox2);
         }
 
+        public static string[] TestCall()
+        {
+            string[] koker = { TextBoxList[0].Text, TextBoxList[1].Text };
+            return koker;
+        }
     }
 }
