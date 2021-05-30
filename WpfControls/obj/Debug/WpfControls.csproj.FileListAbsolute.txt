@@ -1,0 +1,15 @@
+C:\Users\Professional\source\repos\Diplom\WpfControls\bin\Debug\WpfControls.dll
+C:\Users\Professional\source\repos\Diplom\WpfControls\bin\Debug\WpfControls.pdb
+C:\Users\Professional\source\repos\Diplom\WpfControls\obj\Debug\WpfControls_MarkupCompile.cache
+C:\Users\Professional\source\repos\Diplom\WpfControls\obj\Debug\WpfControls_MarkupCompile.lref
+C:\Users\Professional\source\repos\Diplom\WpfControls\obj\Debug\WpfControls.g.resources
+C:\Users\Professional\source\repos\Diplom\WpfControls\obj\Debug\WpfControls.Properties.Resources.resources
+C:\Users\Professional\source\repos\Diplom\WpfControls\obj\Debug\WpfControls.csproj.GenerateResource.cache
+C:\Users\Professional\source\repos\Diplom\WpfControls\obj\Debug\WpfControls.csproj.CoreCompileInputs.cache
+C:\Users\Professional\source\repos\Diplom\WpfControls\obj\Debug\WpfControls.dll
+C:\Users\Professional\source\repos\Diplom\WpfControls\obj\Debug\WpfControls.pdb
+C:\Users\Professional\source\repos\Diplom\WpfControls\obj\Debug\WpfControls.csprojAssemblyReference.cache
+C:\Users\Professional\source\repos\Diplom\WpfControls\obj\Debug\UserControlIncr.g.cs
+C:\Users\Professional\source\repos\Diplom\WpfControls\obj\Debug\UserControlIncr.baml
+C:\Users\Professional\source\repos\Diplom\WpfControls\obj\Debug\UserControlDecr.g.cs
+C:\Users\Professional\source\repos\Diplom\WpfControls\obj\Debug\UserControlDecr.baml
