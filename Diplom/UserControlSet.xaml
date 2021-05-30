@@ -12,7 +12,7 @@
         <Grid Name="GridResult" Background="White" Margin="0,88,0,103">
             <TextBox    Name="AnsBox1" MaxLength="3" HorizontalAlignment="Left" Height="23" Margin="77,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="30"/>
             <TextBox    Name="AnsBox2" MaxLength="7" HorizontalAlignment="Left" Height="23" Margin="182,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-            <Label      Name="DescriptionLbl" Content="Выполните запрос SET с указанием ключа ''TestKey''" HorizontalAlignment="Left" Margin="70,62,0,0" VerticalAlignment="Top"/>
+            <Label      Name="DescriptionLbl" Content="Выполните запрос SET и заполните его непустым значением" HorizontalAlignment="Left" Margin="70,62,0,0" VerticalAlignment="Top"/>
             <Button     Name ="AnsBtn" Command="{Binding UpdateViewCommand}" CommandParameter="Setter" Content="Проверить" HorizontalAlignment="Left" Margin="77,186,0,0" VerticalAlignment="Top" Width="75"/>
             <Label      Name="ResultLbl" Visibility="Hidden" Content="РЕЗУЛЬТАТ" HorizontalAlignment="Left" Margin="70,81,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" FontWeight="Bold" FontSize="24" Foreground="#FFFF5A5A"/>
             <Label      Name="PastedLbl" Content="TestKey" HorizontalAlignment="Left" Margin="112,114,0,0" VerticalAlignment="Top"/>

@@ -21,8 +21,8 @@ namespace Diplom
     /// </summary>
     public partial class UserControlMenuItem : UserControl
     {
-        MainWindow _context;
-        public UserControlMenuItem(ItemMenu itemMenu, MainWindow context)
+        MainPage _context; // указатерь на страницу(юзерный элемент)
+        public UserControlMenuItem(ItemMenu itemMenu, MainPage context)
         {
             InitializeComponent();
 
