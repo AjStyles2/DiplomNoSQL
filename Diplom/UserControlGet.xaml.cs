@@ -29,6 +29,7 @@ namespace Diplom
             InitializeComponent();
             TextBoxList.Add(AnsBox1);
             TextBoxList.Add(AnsBox2);
+            TextBoxList.Add(OutputBox);
         }
 
         private void CheckAnswer_BTN(object sender, RoutedEventArgs e)
@@ -79,10 +80,10 @@ namespace Diplom
 
         }
 
-        public static string[] TestCall()
+        public static string[] GetTextBoxes()
         {
-            string[] koker = { TextBoxList[0].Text, TextBoxList[1].Text };
-            return koker;
+            string[] txBoxes = { TextBoxList[0].Text, TextBoxList[1].Text };
+            return txBoxes;
         }
     }
 }

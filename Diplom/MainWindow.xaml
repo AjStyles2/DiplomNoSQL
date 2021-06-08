@@ -10,6 +10,19 @@
     <Grid>
         <ContentPresenter Name="MainContent">
         </ContentPresenter>
+        <Menu Name="TopMenu" Height="25" VerticalAlignment="Top" Visibility="Hidden" >
+            <MenuItem Header="Справка">
+                <MenuItem Header="Теория NoSQL" >
+                    <MenuItem Header="О NoSQL Redis" Click="OpenTheory_Window"></MenuItem>
+                    <MenuItem Header="Тесты по NoSQL Redis" Click="OpenTheory_Window"></MenuItem>
+                </MenuItem>
+                <!--<Separator />-->
+                <!--<MenuItem Header="Exit" ></MenuItem>-->
+            </MenuItem>
+            <!--<MenuItem Header="Edit" ></MenuItem>
+            <MenuItem Header="View" ></MenuItem>-->
+        </Menu>
+        <Button Visibility="Hidden" Name="ExitBTN" Content="Выход" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 25 20 0" Width="75" Height="30" FontSize="18" Click="Logout_BTN"/>
     </Grid>
 
 </Window>

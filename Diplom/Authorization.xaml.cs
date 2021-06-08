@@ -23,9 +23,10 @@ namespace Diplom
     {
         public ContentPresenter presenter;
 
+        int CurID = 0;              //текущий ID
         string CurLogin = "";       //текущий логин
         string CurPassword = "";    //текущий пароль
-        string CurRole = "";        //текущая роль
+        int CurRole = 0;            //текущая роль
 
         string CurCaptcha = "";     //текущая капча
 
@@ -41,7 +42,7 @@ namespace Diplom
         {
             if (CaptchaTB.Text == CurCaptcha)
             {
-                FindUser(LoginTB.Text, PasswordTB.Text); //Вызываем и передаём аргвы в метод на поиск логина и пароля
+                FindUser(LoginTB.Text, PasswordTB.Password); //Вызываем и передаём аргвы в метод на поиск логина и пароля
                 Captcha(); // меняем капчу от ботов
             }
             else
@@ -50,8 +51,6 @@ namespace Diplom
                 CaptchaTB.Background = Brushes.LightPink; // подсветка окна капчи при неверном вводе
             }
 
-            //CustomerPage UserPage = new CustomerPage();
-            //frame.Content = UserPage;
         }
 
         private void Register_Btn(object sender, RoutedEventArgs e)
@@ -76,27 +75,38 @@ namespace Diplom
                 {
                     while (reader.Read()) // построчно считываем данные
                     {
-                        CurLogin = Convert.ToString(reader.GetValue(0));
-                        CurPassword = Convert.ToString(reader.GetValue(1));
-                        CurRole = Convert.ToString(reader.GetValue(2));
+                        CurID = Convert.ToInt32(reader.GetValue(0));
+                        CurLogin = Convert.ToString(reader.GetValue(1));
+                        CurPassword = Convert.ToString(reader.GetValue(2));
+                        CurRole = Convert.ToInt32(reader.GetValue(6));
                     }
 
-                    //MainWindow.ShowExitButton(true); // Показываем кнопку выхода
+                    MainWindow.ShowExitButton(true); // Показываем кнопку выхода
 
-                    MainPage usa = new MainPage { presenter = this.presenter };
-                    presenter.Content = usa;
+                    MainWindow.MenuList[0].Visibility = Visibility.Visible;
 
-                    //switch (CurRole) //проверка на роль у юзера и открытие нужной ему формы
-                    //{
-                    //    case "Директор":
-                    //        //MainWindow DirPage = new MainWindow() { frame = this.frame }; // то что в {} это типо для передачи инфы на след. страницу, чтоб типо она не пустая была
-                    //        //frame.Content = DirPage;
-                    //        break;
-                    //    default:
-                    //        //MessageBox.Show("Ваша роль неопределена, свяжитесь с администратором", "ОШИБКА");
-                    //        //MainWindow.ShowExitButton(false);
-                    //        break;
-                    //}
+                    switch (CurRole) //проверка на роль у юзера и открытие нужной ему формы
+                    {
+                        case 0:
+                            MainPage.CurID = CurID;
+                            MainPage userPage = new MainPage { presenter = this.presenter }; // то что в {} это типо для передачи инфы на след. страницу, чтоб типо она не пустая была
+                            presenter.Content = userPage;
+                            
+                            break;
+                        case 1:
+                            TeacherControl teacherPage = new TeacherControl { presenter = this.presenter };
+                            presenter.Content = teacherPage;
+
+                            break;
+                        case 2:
+                            UserControlAdministrator adminPage = new UserControlAdministrator { presenter = this.presenter };
+                            presenter.Content = adminPage;
+                            break;
+                        default:
+                            //MessageBox.Show("Ваша роль неопределена, свяжитесь с администратором", "ОШИБКА");
+                            //MainWindow.ShowExitButton(false);
+                            break;
+                    }
                 }
                 else
                 {
@@ -133,6 +143,14 @@ namespace Diplom
         private void RefreshCaptcha_Btn(object sender, RoutedEventArgs e) //кнопка для обновления капчи если сложная
         {
             Captcha(); //просто вызов новой генерации капчи
+        }
+
+        private void EnteringOnEnter(object sender, KeyEventArgs e) // удобный вход на Enter
+        {
+            if (e.Key == Key.Return)
+            {
+                Login_Btn(sender, e);
+            }
         }
     }
 }

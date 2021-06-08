@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Diplom.TeacherControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Diplom"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <ListView x:Name="FileInfoView" HorizontalAlignment="Center" Height="300" Margin="90,75,110,75" Width="600">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id" DisplayMemberBinding ="{Binding Id}"/>
+                    <GridViewColumn Header="Логин" DisplayMemberBinding ="{Binding Login}"/>
+                    <GridViewColumn Header="Имя" DisplayMemberBinding ="{Binding Name}"/>
+                    <GridViewColumn Header="Фамилия" DisplayMemberBinding ="{Binding Surname}"/>
+                    <GridViewColumn Header="Отчество" DisplayMemberBinding ="{Binding Dadname}"/>
+                    <GridViewColumn Header="Прогресс" DisplayMemberBinding ="{Binding Progress}"/>
+                </GridView>
+            </ListView.View>
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Обнулить прогресс" Click="ZeroProgress_Context"/>
+                </ContextMenu>
+            </ListView.ContextMenu>
+        </ListView>
+
+    </Grid>
+</UserControl>

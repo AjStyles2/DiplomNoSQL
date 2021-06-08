@@ -7,23 +7,34 @@
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="1600">
     <Grid>
-        <Canvas Background="Lavender"></Canvas>
+        <Canvas Background="LightGray"></Canvas>
 
-        <Button Content="Войти" HorizontalAlignment="Center" Margin="0 -50 0 0" Width="96" Click="Login_Btn" Height="30" FontSize="18"/>
-        <Button Content="Регистрация"  HorizontalAlignment="Center" Margin="0 50 0 0" Width="110" Click="Register_Btn" Height="30" FontSize="18"/>
+        <Border VerticalAlignment="Center">
+            <Viewbox HorizontalAlignment="Center">
+                <!--<TextBox x:Name="Output" IsReadOnly="True" Text="LOLO" Background="{x:Null}" Foreground="#008B8B" BorderBrush="{x:Null}"/>-->
+                <Image Source="Images\RedisIntro.png" Opacity="0.3" HorizontalAlignment="Center" Height="1" Width="1"/>
+            </Viewbox>
+        </Border>
 
-        <TextBox Name="LoginTB" HorizontalAlignment="Center" Margin="0 -300 0 0" Height="30"  Width="145" FontSize="18"/>
-        <TextBox Name="PasswordTB" HorizontalAlignment="Center" Margin="0 -200 0 0" Height="30" TextWrapping="Wrap" Width="145" FontSize="18"/>
-
-        <Label Name="CapchaLL" Content="CAPTCHA" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 150 0 0" FontFamily="Curlz MT" FontSize="25" FontWeight="Bold"/>
-        <TextBox Name="CaptchaTB" HorizontalAlignment="Center" Margin="0 300 0 0" Height="22" TextWrapping="Wrap" Text="" Width="52" Background="White"/>
-        <Button Content="🔁" HorizontalAlignment="Center" Margin="0 150 -150 0"  Width="25" Height="25" FontFamily="Arial" Click="RefreshCaptcha_Btn" FontSize="16"/>
-
+        <!--<Label Content="Тренажёр по NoSQL Redis" HorizontalAlignment="Center" Margin="0 -600 0 0" Height="125" Width="1200" FontSize="72" FontFamily="Microsoft YaHei" />-->
 
         <Label Content="Логин:" HorizontalAlignment="Center" Margin="0 -300 200 0" Height="30"  Width="80" FontSize="18"/>
         <Label Content="Пароль:" HorizontalAlignment="Center" Margin="0 -200 220 0" Height="35"  Width="80"  FontSize="18"/>
         <Label Content="или" HorizontalAlignment="Center"  Margin="0 10 -10 0" Height="50" Width="50" FontSize="16"/>
         <Label Content="Капча:"  HorizontalAlignment="Center" Margin="0 300 110 0" Height="40" Width="100" FontSize="18" />
+
+
+        <Button Content="Войти" HorizontalAlignment="Center" Margin="0 -50 0 0" Width="96" Click="Login_Btn" Height="30" FontSize="18"/>
+        <Button Content="Регистрация"  HorizontalAlignment="Center" Margin="0 50 0 0" Width="110" Click="Register_Btn" Height="30" FontSize="18"/>
+
+        <TextBox Name="LoginTB" HorizontalAlignment="Center" Margin="0 -300 0 0" Height="30"  Width="145" FontSize="18" KeyDown="EnteringOnEnter"/>
+        <!--<TextBox Name="PasswordTB" HorizontalAlignment="Center" Margin="0 -200 0 0" Height="30" TextWrapping="Wrap" Width="145" FontSize="18" KeyDown="EnteringOnEnter"/>-->
+        <PasswordBox Name="PasswordTB" HorizontalAlignment="Center" Margin="0 -200 0 0" Height="30" Width="145" FontSize="18" KeyDown="EnteringOnEnter"/>
+
+        <Label Name="CapchaLL" Content="CAPTCHA" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 150 0 0" FontFamily="Curlz MT" FontSize="25" FontWeight="Bold"/>
+        <TextBox Name="CaptchaTB" HorizontalAlignment="Center" Margin="0 300 0 0" Height="22" TextWrapping="Wrap" Text="" Width="52" Background="White" KeyDown="EnteringOnEnter"/>
+        <Button Content="🔁" HorizontalAlignment="Center" Margin="0 150 -150 0"  Width="25" Height="25" FontFamily="Arial" Click="RefreshCaptcha_Btn" FontSize="16"/>
+
 
     </Grid>
 </UserControl>

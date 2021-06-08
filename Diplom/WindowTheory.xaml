@@ -1,0 +1,13 @@
+﻿<Window x:Class="Diplom.WindowTheory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Diplom"
+        mc:Ignorable="d"
+        Title="Информация о NoSQL Redis" Height="600" Width="500">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="60,25,0,0" TextWrapping="Wrap" Text="Redis-это хранилище структур данных с открытым исходным кодом в памяти, используемое в качестве базы данных, кэша и брокера сообщений. Redis предоставляет структуры данных, такие как строки, хэши, списки, наборы, сортированные наборы с запросами диапазона, растровые изображения, гиперлоги, геопространственные индексы и потоки. Redis имеет встроенную репликацию, сценарии Lua, удаление LRU, транзакции и различные уровни сохраняемости на диске, а также обеспечивает высокую доступность через Redis Sentinel и автоматическое разделение с помощью кластера Redis" VerticalAlignment="Top" Height="400" Width="388"/>
+
+    </Grid>
+</Window>

@@ -22,10 +22,12 @@
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="326*"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Background="Blue">
-                <Button Content="TEST NEW" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
-                <Rectangle Fill="White" HorizontalAlignment="Left"  Margin="10,25,0,0" Stroke="Black" Width="150" Height="10"/>
-                <Rectangle Name="ProgressRect" Fill="Green" HorizontalAlignment="Left"  Margin="11,24,0,0" Width="148" Height="8"/>
+            <Grid Grid.Row="0" Background="DimGray">
+                <!--<Button Content="TEST NEW" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>-->
+                <Label Content="Ваш прогресс по тренажёру:" HorizontalAlignment="Left" Margin="5,28,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Microsoft Uighur"/>
+                <Rectangle Fill="LightGray" HorizontalAlignment="Left"  Margin="10,36,0,0" Stroke="Black" Width="150" Height="10"/>
+                <Rectangle Name="ProgressRect" Fill="Green" HorizontalAlignment="Left"  Margin="11,36,0,0" Width="148" Height="8"/>
+
             </Grid>
             <ScrollViewer HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="1">
                 <StackPanel x:Name="Menu" Margin="10"/>

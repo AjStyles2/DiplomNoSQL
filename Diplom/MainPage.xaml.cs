@@ -25,6 +25,8 @@ namespace Diplom
     {
 
         public ContentPresenter presenter;
+
+        public static int CurID = 0;
         public MainPage()
         {
             InitializeComponent();
@@ -39,9 +41,9 @@ namespace Diplom
             var item1 = new ItemMenu("REDIS Strings", menuRegister);
 
             var menuSchedule = new List<SubItem>();
-            menuSchedule.Add(new SubItem("RPUSH"));
-            menuSchedule.Add(new SubItem("LPUSH"));
-            menuSchedule.Add(new SubItem("LRANGE"));
+            menuSchedule.Add(new SubItem("RPUSH", new WpfControls.UserControlRpush()));
+            menuSchedule.Add(new SubItem("LPUSH", new WpfControls.UserControlLpush()));
+            menuSchedule.Add(new SubItem("LRANGE", new WpfControls.UserControlLrange()));
             menuSchedule.Add(new SubItem("RPOP"));
             var item2 = new ItemMenu("Lists", menuSchedule);
 
@@ -68,13 +70,9 @@ namespace Diplom
 
             DataContext = new MainViewModel();
 
-            //MessageBox.Show(Convert.ToString(CountFinishedTests()));
+            //MessageBox.Show(Convert.ToString(CurID));
             int cntProg = CountFinishedTests();
             ProgressRect.Width = cntProg * 5;
-            //Authorization firstpage = new Authorization();
-            //firstpage.presenter = MainContent;
-            //MainContent.Content = firstpage;
-
 
         }
 
@@ -87,11 +85,11 @@ namespace Diplom
                 StackPanelMain.Children.Clear();
                 StackPanelMain.Children.Add(screen);
             }
+
         }
 
-        private int CountFinishedTests() // метод с аргументами log и pass для поиска юзера из БД
+        private int CountFinishedTests()
         {
-            //MainWindow.studInfo.Clear(); // очищаем всё, если там что-то будет
             int count = 0;
             
             string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=DiplomUsers;Integrated Security=True"; //подключение к бд
@@ -99,7 +97,7 @@ namespace Diplom
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand();
-                command.CommandText = "SELECT COUNT(ID_Ex) FROM Results WHERE [ID_Stud] = 1"; //выполняем запрос на поиск прогресса пользователя
+                command.CommandText = "SELECT COUNT(ID_Ex) FROM Results WHERE [ID_Stud] = " + CurID; //выполняем запрос на поиск прогресса пользователя
                 command.Connection = connection;
                 SqlDataReader reader = command.ExecuteReader();
 
@@ -110,15 +108,17 @@ namespace Diplom
                         count = Convert.ToInt32(reader.GetValue(0));
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Логин или пароль неверны", "ОШИБКА");
-                }
 
                 reader.Close();
 
             }
+
+            ProgressRect.Width = count * 5;
+
             return count;
+
         }
+
+
     }
 }

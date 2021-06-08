@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Diplom
 {
     /// <summary>
-    /// Логика взаимодействия для UserControlSet.xaml
+    /// Логика взаимодействия для WindowTheory.xaml
     /// </summary>
-    public partial class UserControlSet : UserControl
+    public partial class WindowTheory : Window
     {
-
-        public static ObservableCollection<TextBox> TextBoxList = new ObservableCollection<TextBox>();
-
-        public UserControlSet()
+        public WindowTheory()
         {
             InitializeComponent();
-            TextBoxList.Add(AnsBox1);
-            TextBoxList.Add(AnsBox2);
-            TextBoxList.Add(OutputBox);
         }
-
     }
 }

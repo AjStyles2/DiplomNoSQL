@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Diplom
 {
@@ -13,7 +14,14 @@ namespace Diplom
 
         static RedisStore()
         {
-            LazyConnection = new Lazy<ConnectionMultiplexer>(() => ConnectionMultiplexer.Connect("localhost"));
+            try
+            {
+                LazyConnection = new Lazy<ConnectionMultiplexer>(() => ConnectionMultiplexer.Connect("localhost"));
+            }
+            catch(RedisConnectionException)
+            {
+                MessageBox.Show("Не удалось подключиться к серверу для выполнения запроса", "ОШИБКА");
+            }
         }
 
         public static ConnectionMultiplexer Connection => LazyConnection.Value;
