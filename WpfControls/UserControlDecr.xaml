@@ -12,7 +12,9 @@
         <TextBox    x:Name="AnsBox2" MaxLength="7" HorizontalAlignment="Left" Height="23" Margin="188,158,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
         <TextBox    x:Name="AnsBox3" MaxLength="4" HorizontalAlignment="Left" Height="23" Margin="83,195,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40"/>
         <TextBox    x:Name="AnsBox4" MaxLength="7" HorizontalAlignment="Left" Height="23" Margin="188,195,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <Label      x:Name="DescriptionLbl" Content="Выполните запрос на заполнение ключа Decr числовым значением, а затем выполните запрос DECR с указанием ключа" HorizontalAlignment="Left" Margin="76,103,0,0" VerticalAlignment="Top"/>
+        <Label      x:Name="DescriptionLbl" Content="Выполните запрос на заполнение ключа DecrKey числовым значением, а затем выполните запрос DECR с указанием ключа" HorizontalAlignment="Left" Margin="76,103,0,0" VerticalAlignment="Top"/>
         <Label      x:Name="PastedLbl" Content="DecrKey" HorizontalAlignment="Left" Margin="118,155,0,0" VerticalAlignment="Top"/>
+
+        <TextBox    x:Name="OutputBox" HorizontalAlignment="Left" Height="70" Margin="357,155,0,0" TextWrapping="Wrap" IsReadOnlyCaretVisible="True"  IsReadOnly="True" VerticalAlignment="Top" Width="200"/>
     </Grid>
 </UserControl>

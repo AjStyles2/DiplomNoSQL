@@ -15,5 +15,7 @@
         <Label      x:Name="DescriptionLbl" Content="Выполните запрос на заполнение ключа IncrKey числовым значением, а затем выполните запрос INCR с указанием ключа" HorizontalAlignment="Left" Margin="76,103,0,0" VerticalAlignment="Top"/>
         <Label      x:Name="PastedLbl" Content="IncrKey" HorizontalAlignment="Left" Margin="118,155,0,0" VerticalAlignment="Top"/>
 
+        <TextBox    x:Name="OutputBox" HorizontalAlignment="Left" Height="70" Margin="357,155,0,0" TextWrapping="Wrap" IsReadOnlyCaretVisible="True"  IsReadOnly="True" VerticalAlignment="Top" Width="200"/>
+
     </Grid>
 </UserControl>

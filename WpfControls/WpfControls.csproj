@@ -48,17 +48,60 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompletedCheck.cs" />
     <Compile Include="UserControlDecr.xaml.cs">
       <DependentUpon>UserControlDecr.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlHget.xaml.cs">
+      <DependentUpon>UserControlHget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlHmset.xaml.cs">
+      <DependentUpon>UserControlHmset.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlIncr.xaml.cs">
       <DependentUpon>UserControlIncr.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlLpush.xaml.cs">
+      <DependentUpon>UserControlLpush.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlLrange.xaml.cs">
+      <DependentUpon>UserControlLrange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlRpop.xaml.cs">
+      <DependentUpon>UserControlRpop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlRpush.xaml.cs">
+      <DependentUpon>UserControlRpush.xaml</DependentUpon>
     </Compile>
     <Page Include="UserControlDecr.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControlHget.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlHmset.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControlIncr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlLpush.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlLrange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlRpop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlRpush.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
